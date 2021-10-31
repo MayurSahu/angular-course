@@ -1,0 +1,19 @@
+<p>user works!</p>
+<span>This is a user component</span>
+Name:{{user.name}}
+Age:{{user.age}}
+Id:{{user.id}}
+<button (click)="sendUserEvent()">Send User Event</button>
+<h3>Attribute Directive</h3>
+<div>Default Directive</div>
+<div [ngClass]="isColored?'colored':''">adds or removes css classes</div>
+<div [ngStyle]="currentStyle">adds or removes a set of HTML sytles</div>
+<div [ngModel]="isColored?'colored':''">adds two-way data binding on HTML elems</div>
+
+<h3>structural directives</h3>
+<h4>*ngIf</h4>
+<h4>*ngFor</h4>
+<ul *ngFor="let item of posts">
+    <li>{{item.id}}</li>
+    <li>{{item.title}}</li>
+</ul>
